@@ -99,3 +99,93 @@ timeline
 		opacity: 0,
 		duration: 3,
 	});
+
+// ========== MENU NAVIGATION & ACTIVE STATE ==========
+
+const menuLinks = document.querySelectorAll('.menu a');
+const sections = {
+	'nav-home': 0,
+	'nav-about': 0,
+	'nav-project': window.innerWidth,
+	'nav-contact': window.innerWidth * 2
+};
+
+// Hàm để đặt active state cho menu
+// --- SỬA ĐOẠN NÀY TRONG SCRIPT.JS ---
+
+// Hàm để đặt active state cho menu (Đã sửa để dùng Class CSS)
+function setActiveMenu(activeLink) {
+  // 1. Xóa class 'active' khỏi tất cả các link
+  menuLinks.forEach(link => {
+    link.classList.remove('active');
+    // Xóa luôn mấy cái style thủ công cũ để không bị đè
+    link.style.opacity = ''; 
+    link.style.fontWeight = '';
+  });
+  
+  // 2. Thêm class 'active' vào link đang chọn
+  if (activeLink) {
+    activeLink.classList.add('active');
+  }
+}
+
+// Set Home active mặc định khi load trang
+window.addEventListener('load', () => {
+	const homeLink = document.querySelector('.nav-home');
+	setActiveMenu(homeLink);
+});
+
+// Xử lý click menu
+menuLinks.forEach(link => {
+	link.addEventListener('click', (e) => {
+		e.preventDefault();
+		
+		// Set active cho menu item được click
+		setActiveMenu(link);
+		
+		// Lấy class để xác định section
+		let scrollPosition = 0;
+		
+		if (link.classList.contains('nav-home')) {
+			scrollPosition = 0;
+		} else if (link.classList.contains('nav-about')) {
+			scrollPosition = 600; // Vị trí sau khi zoom window xong
+		} else if (link.classList.contains('nav-project')) {
+			scrollPosition = 1200; // Vị trí phần project
+		} else if (link.classList.contains('nav-contact')) {
+			scrollPosition = document.body.scrollHeight - window.innerHeight;
+		}
+		
+		// Smooth scroll
+		window.scrollTo({
+			top: scrollPosition,
+			behavior: 'smooth'
+		});
+	});
+});
+
+// Theo dõi scroll để tự động active menu
+let ticking = false;
+
+window.addEventListener('scroll', () => {
+	if (!ticking) {
+		window.requestAnimationFrame(() => {
+			const scrollPosition = window.scrollY;
+			
+			// Xác định section hiện tại dựa trên vị trí scroll
+			if (scrollPosition < 200) {
+				setActiveMenu(document.querySelector('.nav-home'));
+			} else if (scrollPosition < 600) {
+				setActiveMenu(document.querySelector('.nav-about'));
+			} else if (scrollPosition < document.body.scrollHeight - window.innerHeight - 200) {
+				setActiveMenu(document.querySelector('.nav-project'));
+			} else {
+				setActiveMenu(document.querySelector('.nav-contact'));
+			}
+			
+			ticking = false;
+		});
+		
+		ticking = true;
+	}
+});

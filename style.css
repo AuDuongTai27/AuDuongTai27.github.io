@@ -384,3 +384,53 @@ footer {
 .fa-arrow-right-long {
 	transform: translateX(20px);
 }
+html {
+  scroll-behavior: smooth;
+}
+/* Thêm vào cuối file style.css */
+
+/* --- ACTIVE MENU STATE (MỚI) --- */
+
+/* --- CSS CHO MENU ACTIVE (MÀU XANH TRỜI & TO LÊN) --- */
+
+/* Trạng thái mặc định */
+.menu a {
+  color: #fff;
+  opacity: 0.6;
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  /* Transition để khi to lên nó mượt, không bị giật */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+/* Khi có class active (Do JS thêm vào) */
+.menu a.active {
+  opacity: 1;
+  color: #00C9FF; /* Màu xanh da trời NEON */
+  
+  /* Phóng to lên 1.3 lần */
+  transform: scale(1.3); 
+  font-weight: 700;
+  
+  /* Hiệu ứng phát sáng */
+  text-shadow: 0 0 15px rgba(0, 201, 255, 0.8);
+}
+
+/* Gạch chân phát sáng (Tuỳ chọn) */
+.menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00C9FF, transparent);
+  box-shadow: 0 0 10px rgba(0, 201, 255, 0.7);
+  transition: width 0.3s ease;
+}
+
+.menu a.active::after {
+  width: 100%;
+}
