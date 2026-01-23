@@ -196,8 +196,8 @@ section {
 	transform: translateY(100px);
 }
 .box1 .col-3 img:nth-child(3) {
-	width: 200px;
-	height: 200px;
+	width: 300px;
+	height: 300px;
 	transform: translateX(-50px);
 }
 
@@ -253,9 +253,13 @@ section {
 	width: 300px;
 }
 
-.box2 .col-3 img:nth-child(1) {
+.box2 .col-3 video {
 	height: 300px;
 	width: 220px;
+	object-fit: cover;
+	z-index: -2;
+	position: relative;
+	border-radius: 10% 10%;
 }
 
 .box2 .col-3 img:nth-child(2) {
@@ -299,10 +303,15 @@ section {
 	transform: translateY(-30px);
 }
 
-.box3 .col-3 img {
-	width: 400px;
+.box3 .col-3 video {
 	height: auto;
+	width: 400px;
+	object-fit: cover;
+	z-index: -2;
+	position: relative;
+	border-radius: 10% 10%;
 }
+
 
 footer {
 	background-color: #141414;
