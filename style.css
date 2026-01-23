@@ -106,13 +106,16 @@ a {
 }
 
 .wrapper {
-	display: flex;
+    display: flex;
+    width: 300vw; /* Home + Project + Contact = 300vw */
+    height: 100vh;
+    flex-wrap: nowrap;
 }
 
-section {
-	width: 100vw;
-	flex-shrink: 0;
-	overflow: hidden;
+section, .section {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
 }
 
 .video-section video {
@@ -142,9 +145,11 @@ section {
 }
 
 .boxes-container {
-	display: flex;
-	flex-direction: column;
-	gap: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    width: 100%;
+    /* Quan trọng: Sẽ dùng JS để kéo cái này lên */
 }
 
 .columns {
@@ -488,6 +493,20 @@ html {
 .menu a.active::after {
 	width: 100%;
 }
-.project-section{
-	padding-top: 100px;
+.project-section {
+    background-color: #141414;
+    padding: 0 5rem;
+    overflow: hidden; /* Cắt phần thừa */
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px; /* Né navbar */
+    position: relative;
+	padding-bottom: 100px;
+}
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
 }
