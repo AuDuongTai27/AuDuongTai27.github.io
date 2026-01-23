@@ -149,9 +149,9 @@ menuLinks.forEach(link => {
 		if (link.classList.contains('nav-home')) {
 			scrollPosition = 0;
 		} else if (link.classList.contains('nav-about')) {
-			scrollPosition = 600; // Vị trí sau khi zoom window xong
+			scrollPosition = 500; // Vị trí sau khi zoom window xong
 		} else if (link.classList.contains('nav-project')) {
-			scrollPosition = 1200; // Vị trí phần project
+			scrollPosition = 600; // Vị trí phần project
 		} else if (link.classList.contains('nav-contact')) {
 			scrollPosition = document.body.scrollHeight - window.innerHeight;
 		}
