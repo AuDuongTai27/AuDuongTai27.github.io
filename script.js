@@ -132,14 +132,14 @@ ScrollTrigger.create({
 
 // Project: Dài ra rất nhiều (từ 3000 đến 10000)
 ScrollTrigger.create({
-  trigger: "body", start: "3000px top", end: "10000px top",
+  trigger: "body", start: "3000px top", end: "11000px top",
   onEnter: () => setActiveMenu('.nav-project'),
   onEnterBack: () => setActiveMenu('.nav-project')
 });
 
 // Contact
 ScrollTrigger.create({
-  trigger: "body", start: "10000px top", end: "bottom bottom",
+  trigger: "body", start: "11000px top", end: "bottom bottom",
   onEnter: () => setActiveMenu('.nav-contact'),
   onEnterBack: () => setActiveMenu('.nav-contact')
 });

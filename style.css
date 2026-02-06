@@ -201,9 +201,10 @@ section, .section {
 	transform: translateY(100px);
 }
 .box1 .col-3 img:nth-child(3) {
-	width: 300px;
-	height: 300px;
-	transform: translateX(-50px);
+	width: 200px;
+	height: 200px;
+	transform: translateX(50px);
+	transform: translateY(100px);
 }
 
 
@@ -396,6 +397,9 @@ footer {
 	padding: 4rem;
 	gap: 5rem;
 }
+.black{
+	color: black;
+}
 
 .tv {
 	font-family: w;
@@ -420,11 +424,11 @@ footer {
 .right-side {
 	/* background-color: blue; */
 	margin: auto;
-	width: 150px;
-	height: 150px;
-	border-top: 2px solid;
-	border-bottom: 2px solid;
-	border-color: rgba(255, 255, 255, 0.6);
+	width: 200px;
+	height: 200px;
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+	border-color: rgba(138, 132, 132, 0.6);
 	border-radius: 50%;
 	position: relative;
 }
@@ -432,7 +436,7 @@ footer {
 .right-side p {
 	position: absolute;
 	top: 45%;
-	left: -15%;
+	left: 5%;
 	text-transform: uppercase;
 	font-size: 14px;
 }
@@ -508,5 +512,121 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #000;
+    color: #fff;
+}
+/* --- CONTACT SECTION STYLE --- */
+
+.footer-section {
+    background-color: #000; /* Màu nền đen tuyền cho sang */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* 1. Dòng chữ nhỏ "What's Next?" */
+.sub-heading {
+    font-size: 14px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: -10px;
+}
+
+/* 2. Tiêu đề lớn "Let's Work Together" */
+.big-title {
+    font-family: w; /* Font WanoQuin của bạn */
+    font-size: clamp(40px, 8vw, 100px); /* Tự co giãn theo màn hình */
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* 3. Link Email Siêu To */
+.email-link {
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(20px, 4vw, 50px);
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+    font-weight: 300;
+}
+
+/* Hiệu ứng gạch chân chạy từ trái sang phải khi hover */
+.email-link .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #00C9FF; /* Màu Neon xanh */
+    transition: width 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.email-link:hover {
+    color: #00C9FF;
+}
+
+.email-link:hover .underline {
+    width: 100%;
+}
+
+/* 4. Mạng xã hội */
+.social-grid {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-item {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #aaa;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.social-item:hover {
+    color: #fff;
+    transform: translateY(-5px); /* Bay lên nhẹ */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* 5. Footer Bottom (Logo nhỏ & Copyright) */
+.footer-bottom {
+    position: absolute;
+    bottom: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 12px;
+    color: #555;
+}
+
+.logo-small {
+    font-family: w;
+    font-size: 24px;
     color: #fff;
 }
