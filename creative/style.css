@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: w;
+	src: url(./fonts/WanoQuin-ExtraBold.otf);
+}
+
+body {
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	overflow-x: hidden;
+	background-color: #141414;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 3rem;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	z-index: 1000;
+}
+.menu {
+    position: absolute;       /* Tách khỏi dòng chảy flex */
+    left: 50%;                /* Đẩy sang 50% màn hình */
+    transform: translateX(-50%); /* Kéo ngược lại 50% độ rộng của chính nó để căn tâm */
+    
+    /* Các thuộc tính cũ giữ nguyên */
+    display: flex;
+    gap: 5rem;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.navbar span {
+	position: absolute;
+	bottom: 0;
+	height: 2px;
+	width: 50px;
+	background: linear-gradient(90deg, transparent, #fff);
+	animation: animate 5s infinite linear;
+}
+
+@keyframes animate {
+	0% {
+		left: 0;
+		transform: translate(-100%);
+	}
+
+	100% {
+		left: 100%;
+		transform: translate(0%);
+	}
+}
+
+.logo {
+	text-transform: capitalize;
+	font-size: 30px;
+	cursor: pointer;
+	font-family: w;
+	display: flex;
+}
+
+.col-avatar-logo {
+	column-gap: 20px;
+	display: flex;
+	flex: 1;
+	/* Lệnh này bảo các cột tự chia đều độ rộng bằng nhau */
+	align-items: center;
+}
+.col-avatar img{
+	border-radius: 50%;
+	width: 50px;
+    height: 50px;
+}
+
+
+li {
+	list-style: none;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu {
+	display: flex;
+	gap: 5rem;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+.btn {
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.wrapper {
+    display: flex;
+    width: 300vw; /* Home + Project + Contact = 300vw */
+    height: 100vh;
+    flex-wrap: nowrap;
+}
+
+section, .section {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.video-section video {
+	height: 100vh;
+	width: 100vw;
+	object-fit: cover;
+	z-index: -2;
+	position: relative;
+}
+
+.img-container {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+.img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.section {
+	background-color: #141414;
+	padding: 7rem;
+}
+
+.boxes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    width: 100%;
+    /* Quan trọng: Sẽ dùng JS để kéo cái này lên */
+}
+
+.columns {
+	display: flex;
+	gap: 1.5rem;
+	position: relative;
+}
+
+.col img {
+	object-fit: cover;
+	border-radius: 10% 10%;
+}
+
+.col-1 {
+	display: flex;
+	gap: 1.5rem;
+	flex: 5;
+}
+
+.box1 .col-1 img:first-child {
+	width: 150px;
+	height: 180px;
+	transform: translateY(-30px);
+	transform: translateX(50px);
+}
+
+.box1 .col-1 img:nth-child(2) {
+	width: 380px;
+	height: 430px;
+}
+
+.col-3 {
+	display: flex;
+	justify-content: center;
+	gap: 2.5rem;
+	flex-wrap: wrap;
+	flex: 4;
+}
+
+.box1 .col-3 img:first-child {
+	width: 320px;
+	height: 170px;
+	transform: translateY(50px);
+}
+
+.box1 .col-3 img:nth-child(2) {
+	width: 150px;
+	height: 250px;
+	transform: translateY(100px);
+}
+.box1 .col-3 img:nth-child(3) {
+	width: 200px;
+	height: 200px;
+	transform: translateX(50px);
+	transform: translateY(100px);
+}
+
+
+.col-2 {
+	margin: auto;
+	flex: 1.5;
+}
+
+.col-2 h1 {
+	font-family: w;
+	font-size: 100px;
+	text-transform: capitalize;
+	position: absolute;
+	top: 50px;
+	left: 47%;
+	z-index: 100;
+}
+
+.box1 .col-2 h1 {
+	top: 0;
+}
+
+.col-2 span {
+	font-size: 8px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	opacity: 0.7;
+}
+
+.line {
+	height: 1px;
+	width: 50px;
+	background-color: rgba(255, 255, 255, 0.1);
+	margin: 2rem 0;
+}
+
+.text-box p {
+	font-size: 12px;
+	line-height: 1.9;
+	padding-bottom: 1rem;
+	opacity: 0.7;
+}
+
+.box2 .col-1 img:first-child {
+	width: 200px;
+	height: 250px;
+	transform: translateY(200px);
+}
+
+.box2 .col-1 img:nth-child(2) {
+	height: 380px;
+	width: 300px;
+}
+
+.box2 .col-3 video {
+	height: 300px;
+	width: 220px;
+	object-fit: cover;
+	z-index: -2;
+	position: relative;
+	border-radius: 10% 10%;
+}
+
+.box2 .col-3 img:nth-child(2) {
+	width: 180px;
+	height: 200px;
+	align-self: flex-end;
+}
+
+.box2 .col-3 img:nth-child(3) {
+	width: 380px;
+	height: 200px;
+	transform: translateX(80px);
+}
+
+.box3 .col-1 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box3 .col-1 img:nth-child(1) {
+	width: 200px;
+	height: 280px;
+	transform: translateX(30px);
+}
+
+.box3 .col-1 img:nth-child(2) {
+	width: 180px;
+	height: 200px;
+	margin-left: 80px;
+	align-self: center;
+}
+
+.box3 .col-1 img:nth-child(3) {
+	width: 280px;
+	height: 180px;
+}
+
+.box3 .col-1 img:nth-child(4) {
+	width: 250px;
+	height: 180px;
+	transform: translateY(-30px);
+}
+
+.box3 .col-3 video {
+	height: auto;
+	width: 400px;
+	object-fit: cover;
+	z-index: -2;
+	position: relative;
+	border-radius: 10% 10%;
+}
+
+
+footer {
+	background-color: #141414;
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5rem 3rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-content {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	font-family: w;
+	width: 450px;
+	position: relative;
+	height: 110px;
+	overflow: hidden;
+}
+
+.bg {
+	font-size: 100px;
+}
+
+.sm {
+	font-size: 35px;
+	height: 40px;
+}
+
+.left {
+	left: -25%;
+}
+
+.right {
+	top: 50px;
+	left: 75%;
+}
+
+.title span {
+	position: absolute;
+}
+
+.n {
+	z-index: -1;
+}
+
+.text-content p {
+	transform: translateY(150px);
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 12px;
+	font-weight: 300;
+}
+
+.v_container {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	/* opacity: 0; */
+}
+
+.left-side {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 4rem;
+	gap: 5rem;
+}
+.black{
+	color: black;
+}
+
+.tv {
+	font-family: w;
+	display: flex;
+	text-transform: capitalize;
+}
+
+.bottom {
+	transform: translateY(70px);
+}
+
+.text-container {
+	max-width: 260px;
+}
+
+.text-container p {
+	padding-bottom: 1rem;
+	line-height: 1.4;
+	opacity: 0.8;
+}
+
+.right-side {
+	/* background-color: blue; */
+	margin: auto;
+	width: 200px;
+	height: 200px;
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+	border-color: rgba(138, 132, 132, 0.6);
+	border-radius: 50%;
+	position: relative;
+}
+
+.right-side p {
+	position: absolute;
+	top: 45%;
+	left: 5%;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.fa-arrow-right-long {
+	transform: translateX(20px);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Thêm vào cuối file style.css */
+
+/* --- ACTIVE MENU STATE (MỚI) --- */
+
+/* --- CSS CHO MENU ACTIVE (MÀU XANH TRỜI & TO LÊN) --- */
+
+/* Trạng thái mặc định */
+.menu a {
+	color: #fff;
+	opacity: 0.6;
+	font-size: 14px;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	/* Transition để khi to lên nó mượt, không bị giật */
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Khi có class active (Do JS thêm vào) */
+.menu a.active {
+	opacity: 1;
+	color: #00C9FF;
+	/* Màu xanh da trời NEON */
+
+	/* Phóng to lên 1.3 lần */
+	transform: scale(1.3);
+	font-weight: 700;
+
+	/* Hiệu ứng phát sáng */
+	text-shadow: 0 0 15px rgba(0, 201, 255, 0.8);
+}
+
+/* Gạch chân phát sáng (Tuỳ chọn) */
+.menu a::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: linear-gradient(90deg, #00C9FF, transparent);
+	box-shadow: 0 0 10px rgba(0, 201, 255, 0.7);
+	transition: width 0.3s ease;
+}
+
+.menu a.active::after {
+	width: 100%;
+}
+.project-section {
+    background-color: #141414;
+    padding: 0 5rem;
+    overflow: hidden; /* Cắt phần thừa */
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px; /* Né navbar */
+    position: relative;
+	padding-bottom: 100px;
+}
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+}
+/* --- CONTACT SECTION STYLE --- */
+
+.footer-section {
+    background-color: #000; /* Màu nền đen tuyền cho sang */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* 1. Dòng chữ nhỏ "What's Next?" */
+.sub-heading {
+    font-size: 14px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: -10px;
+}
+
+/* 2. Tiêu đề lớn "Let's Work Together" */
+.big-title {
+    font-family: w; /* Font WanoQuin của bạn */
+    font-size: clamp(40px, 8vw, 100px); /* Tự co giãn theo màn hình */
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* 3. Link Email Siêu To */
+.email-link {
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(20px, 4vw, 50px);
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+    font-weight: 300;
+}
+
+/* Hiệu ứng gạch chân chạy từ trái sang phải khi hover */
+.email-link .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #00C9FF; /* Màu Neon xanh */
+    transition: width 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.email-link:hover {
+    color: #00C9FF;
+}
+
+.email-link:hover .underline {
+    width: 100%;
+}
+
+/* 4. Mạng xã hội */
+.social-grid {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-item {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #aaa;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.social-item:hover {
+    color: #fff;
+    transform: translateY(-5px); /* Bay lên nhẹ */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* 5. Footer Bottom (Logo nhỏ & Copyright) */
+.footer-bottom {
+    position: absolute;
+    bottom: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 12px;
+    color: #555;
+}
+
+.logo-small {
+    font-family: w;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* ========================================= */
+/* BACKGROUND EFFECTS (GLOW + NOISE) */
+/* ========================================= */
+
+/* 1. Lớp chứa (Container) */
+.bg-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* Nằm dưới nội dung nhưng trên nền đen */
+    pointer-events: none; /* Không chặn click chuột */
+}
+
+/* Đảm bảo nội dung chữ nổi lên trên hiệu ứng */
+.boxes-container, .contact-container {
+    position: relative;
+    z-index: 10; 
+}
+
+/* 2. Lớp phủ nhiễu hạt (Noise) */
+.noise-overlay {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.05; /* Giảm độ mờ xuống để đỡ nặng mắt */
+    animation: noiseMove 0.2s infinite;
+}
+
+@keyframes noiseMove {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -5%); }
+    50% { transform: translate(-10%, 5%); }
+    100% { transform: translate(5%, 0); }
+}
+
+/* 3. Các đốm sáng (Blobs) */
+.glow-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px); /* Làm nhòe mạnh */
+    opacity: 0.3; /* Mờ ảo vừa phải */
+    will-change: transform; /* Tối ưu hiệu năng render */
+}
+
+/* Đốm 1: Xanh Neon */
+.blob-1 {
+    width: 500px;
+    height: 500px;
+    background: #00C9FF;
+    top: -100px;
+    left: -100px;
+    animation: floatBlob 10s infinite alternate ease-in-out;
+}
+
+/* Đốm 2: Tím */
+.blob-2 {
+    width: 600px;
+    height: 600px;
+    background: #7000FF;
+    bottom: -100px;
+    right: -100px;
+    animation: floatBlob 12s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes floatBlob {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 50px) scale(1.1); }
+}
+
+/* Cập nhật lại màu nền Project & Contact để hiệu ứng hiện rõ */
+.project-section, .footer-section {
+    position: relative;
+    background-color: #0e0e0e; /* Màu đen hơi xám để noise hiện rõ hơn đen tuyền */
+}
+.switch-mode-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    color: #333;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.switch-mode-btn:hover {
+    background: #000;
+    color: #00C9FF; /* Màu Neon khi hover */
+    border-color: #00C9FF;
+    transform: scale(1.05);
+}
+
+.switch-mode-btn .icon { font-size: 18px; }
