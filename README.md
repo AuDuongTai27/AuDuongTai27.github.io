@@ -52,7 +52,7 @@ To run this project on your local machine:
 This project integrates two distinct open-source designs to create a complete personal brand ecosystem:
 
 ### 1. The Professional Mode (Formal)
-* **Source:** [DoNguyenAnhTuan](https://github.com/DoNguyenAnhTuan)
+* **Source:** [DoNguyenAnhTuan](https://github.com/DoNguyenAnhTuan/AnhTuan-Portfolio)
 * **Description:** This section utilizes a clean, minimal, and structured layout. It is designed to function as a digital Resume/CV, allowing recruiters to quickly access education, work experience, and certifications without visual distractions.
 
 ### 2. The Creative Mode (Interactive)
