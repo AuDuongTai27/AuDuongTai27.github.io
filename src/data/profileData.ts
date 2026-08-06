@@ -28,8 +28,8 @@ export const profileData: ProfileData = {
   avatar: "/assets/images/my-avatar.png",
   aboutPhoto: "/assets/images/my-avatar.png",
   bioParagraphs: [
-    "Là một sinh viên Kỹ thuật Phần mềm và cũng như là đang thực tập như là một Chuyên viên tại Fablab, mình luôn hứng thú với việc mang những dòng code từ màn hình máy tính ra thế giới thực, đặc biệt là trong lĩnh vực Robotics.",
-    "Hiện tại, mình tập trung nghiên cứu sâu về ROS2 để xây dựng hệ thống điều khiển cho robot và ứng dụng lý thuyết phức tạp vào các dự án thực tế. Ngoài giờ lên lab hay ngồi code, mình còn dành thời gian chia sẻ kiến thức qua việc dạy lập trình và hướng dẫn IELTS. Với mình, kỹ thuật là để giải quyết vấn đề, và chia sẻ là cách để học tốt nhất."
+    "Là một sinh viên Kỹ thuật Phần mềm và hiện đang thực tập với vai trò Chuyên viên tại FabLab, mình luôn hứng thú với việc biến những dòng code thành các giải pháp có thể giải quyết những bài toán thực tế. Mình có kinh nghiệm trong lĩnh vực Robotics với ROS2 và Computer Vision, đồng thời yêu thích việc khám phá, nghiên cứu và ứng dụng các công nghệ mới vào sản phẩm.",
+    "Hiện tại, mình đang tập trung phát triển kỹ năng Full-stack Web Development và xây dựng các ứng dụng tích hợp AI, từ việc sử dụng các mô hình thông qua API đến tự phát triển và triển khai các giải pháp AI cho từng bài toán cụ thể. Ngoài việc học và phát triển dự án, mình cũng thích chia sẻ kiến thức thông qua việc giảng dạy lập trình và hướng dẫn IELTS."
   ],
   contacts: [
     {
@@ -69,7 +69,7 @@ export const profileData: ProfileData = {
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/t%C3%A0i-%C3%A2u-d%C6%B0%C6%A1ng-14a716363/",
+      url: "https://www.linkedin.com/in/tai-au-duong-14a716363/",
       icon: "linkedin"
     }
   ]
