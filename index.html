@@ -1,93 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Au Duong Tai | Portfolio Selection</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { height: 100vh; display: flex; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
-
-        /* --- CẤU TRÚC CHIA ĐÔI --- */
-        .split {
-            flex: 1;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.5s ease-in-out;
-            cursor: pointer;
-            position: relative;
-            text-decoration: none; /* Bỏ gạch chân link */
-        }
-
-        /* Hiệu ứng: Di chuột bên nào, bên đó to ra */
-        .split:hover { flex: 2; }
-        
-        /* --- BÊN TRÁI: CREATIVE (GSAP) --- */
-        .split.creative {
-            background-color: #0e0e0e;
-            color: #fff;
-            border-right: 1px solid #333;
-        }
-        .split.creative:hover { background-color: #000; }
-        
-        .split.creative h1 {
-            font-family: 'Courier New', monospace;
-            font-size: 3rem;
-            color: #00C9FF; /* Màu Neon của bạn */
-            text-shadow: 0 0 20px rgba(0, 201, 255, 0.5);
-        }
-        .split.creative p { letter-spacing: 2px; opacity: 0.7; margin-top: 10px; }
-
-        /* --- BÊN PHẢI: FORMAL (CV) --- */
-        .split.formal {
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .split.formal:hover { background-color: #fff; }
-
-        .split.formal h1 {
-            font-family: 'Georgia', serif;
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-        }
-        .split.formal p { font-style: italic; opacity: 0.8; margin-top: 10px; }
-
-        /* --- NÚT BẤM GIẢ (Visual) --- */
-        .btn {
-            margin-top: 30px;
-            padding: 10px 30px;
-            border: 2px solid;
-            border-radius: 50px;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-        
-        .creative .btn { border-color: #00C9FF; color: #00C9FF; }
-        .creative:hover .btn { background: #00C9FF; color: #000; box-shadow: 0 0 20px #00C9FF; }
-
-        .formal .btn { border-color: #333; color: #333; }
-        .formal:hover .btn { background: #333; color: #fff; }
-
-    </style>
-</head>
-<body>
-
-    <a href="./creative/index.html" class="split creative">
-        <h1>INTERACTIVE</h1>
-        <p>Robotics & Animation</p>
-        <div class="btn">Enter World</div>
-    </a>
-
-    <a href="./formal/index.html" class="split formal">
-        <h1>PROFESSIONAL</h1>
-        <p>Resume & Case Studies</p>
-        <div class="btn">View Profile</div>
-    </a>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>react-formal</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
